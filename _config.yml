@@ -1,5 +1,9 @@
 # Where things are
+<<<<<<< HEAD
 name: APEL
+=======
+name: Apel
+>>>>>>> origin/master
 source:      .
 destination: ./_site
 plugins:     ./_plugins

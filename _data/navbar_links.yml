@@ -9,6 +9,7 @@
 -   name: "Updates"
     url: "/updates/"
 
+<<<<<<< HEAD
 -   name: "Software RPMs"
     url: "/rpms/"
  
@@ -17,3 +18,16 @@
 
 -   name: "Old Versions"
     url: "/archive/"
+=======
+-   name: "Apel Packages"
+    url: "/rpms/"
+ 
+-   name: "Apel SRPM Packages"
+    url: "/srpms/"
+
+-   name: "Legacy Versions"
+    url: "/archive/"
+
+-   name: "Blog Archive"
+    url: "/updates/archive/"
+>>>>>>> origin/master
