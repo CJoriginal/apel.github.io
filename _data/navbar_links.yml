@@ -6,14 +6,11 @@
 -   name: "Documentation"
     url: "/documentation/"
  
--   name: "Updates"
-    url: "/updates/"
+-   name: "News"
+    url: "/news/"
 
--   name: "Software RPMs"
+-   name: "APEL Packages"
     url: "/rpms/"
  
--   name: "Source RPMs"
-    url: "/srpms/"
-
 -   name: "Old Versions"
     url: "/archive/"

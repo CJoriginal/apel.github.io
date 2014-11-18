@@ -5,7 +5,8 @@
         <p>{{page.subheading}}</p>
 
         <ul>
-            <li><a class="apel-zip-download" href="https://github.com/apel/apel/releases/latest">Download <strong>ZIP File</strong></a></li>
+            <li><a class="apel-SL5-download" href="/rpms/latest/SL5">Download <strong>SL5 RPM</strong></a></li>
+            <li><a class="apel-SL6-download" href="/rpms/latest/SL6">Download <strong>SL6 RPM</strong></a></li>
             <li><a class="apel-tar-download" href="https://github.com/apel/apel/releases/latest">Download <strong>TAR Ball</strong></a></li>
             <li><a href="{{page.project-url}}">View On <strong>GitHub</strong></a></li>
         </ul>
@@ -15,12 +16,22 @@
         {% include nav.html %}
     </header>
 
-    <section>
-
+    <section style="float:  left; width: 40%">
+  
     {{ content }}
 
     </section>
 
+    <section style="float:  right; width: 50%; height: 590px;">
+            <h1>Latest News</h1>
+            {% for post in site.posts limit:1 %}
+                <a href="{{ post.url }}">
+                <h2>{{ post.title }}</h2>
+                <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p>
+                <div>{{ post.content |truncatehtml | truncatewords: 60 }}</div>
+                </a>
+            {% endfor %}
+    </section>
     <!-- Get Latest Release -->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -42,12 +53,10 @@
                             //Output info to console log
                             console.log(json[objCount].tag_name);
                             console.log(json[objCount].created_at);
-                            console.log(json[objCount].zipball_url);
                             console.log(json[objCount].tarball_url);
                             console.log(json[objCount].assets);
 
                             //Set HREFs to relevant urls
-                            $(".apel-zip-download").attr("href", json[objCount].zipball_url);
                             $(".apel-tar-download").attr("href", json[objCount].tarball_url);
 
                             // exit loop
